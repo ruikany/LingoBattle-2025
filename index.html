@@ -1,31 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Lingo Battles</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./styles.css" rel="stylesheet" />
-</head>
-<body>
+  </head>
+  <body>
     <div id="login">
-        <h1>LingoBattles</h1>
-        <input type="text" id="username" placeholder="Enter username">
-        <button onclick="joinGame()">Join Game</button>
+      <h1>LingoBattles</h1>
+      <input type="text" id="username" placeholder="Enter username" />
+      <button onclick="joinGame()">Join Game</button>
     </div>
 
     <div id="lobby">
-        <h2>Lobby</h2>
-        <div id="lobby-players"></div>
-        <button id="start-game-btn" onclick="startGame()" style="display: none;">Start Game</button>
-        <div id="waiting-message">Waiting for the leader to start the game...</div>
+      <h2>Lobby</h2>
+      <div id="lobby-players"></div>
+      <button id="start-game-btn" onclick="startGame()" style="display: none">
+        Start Game
+      </button>
+      <div id="waiting-message">
+        Waiting for the party leader to start the game...
+      </div>
     </div>
 
-    <div id="players" style="display: none;"></div>
-    <div id="board" style="display: none;"></div>
+    <div id="players" style="display: none"></div>
+    <div id="board" style="display: none"></div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="./socket.js"></script>
     <script src="./client.js"></script>
-</body>
+  </body>
 </html>
